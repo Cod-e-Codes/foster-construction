@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Foster Construction & Remodeling LLC - New construction, remodeling, interior & exterior work in South Carolina.">
+    <title>Foster Construction & Remodeling LLC</title>
+    <link rel="icon" type="image/webp" href="images/favicon.webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap">
+    <style>
+        /* Font Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .logo {
+            width: 15vw;
+            max-width: 50px;
+            height: auto;
+        }
+
+        .sc-logo {
+            width: 20vw;
+            max-width: 200px;
+            height: auto;
+            /* Maintains aspect ratio */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Style for the snackbar */
+        #snackbar {
+            opacity: 0;
+            animation: fadeInOut 3s forwards;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Add fade-in and fade-out animations */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+
+        .fade-out {
+            animation: fadeOut 0.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        /* Remove fixed background-attachment for smoother parallax */
+        .parallax {
+            background-image: url('images/forest-bg.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        /* Menu open state */
+        #mobile-menu.open {
+            max-height: 500px;
+            /* Adjust this value as needed */
+        }
+    </style>
+    <meta name="keywords" content="construction, remodeling, custom homes, South Carolina">
+    <meta property="og:title" content="Foster Construction & Remodeling LLC">
+    <meta property="og:description"
+        content="New construction, remodeling, and custom interior & exterior work in South Carolina.">
+    <meta property="og:image" content="https://cod-e-codes.com/images/preview-new.webp">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Foster Construction & Remodeling LLC",
+    "description": "New construction, remodeling, interior & exterior work in South Carolina.",
+    "url": "https://cod-e-codes.com/foster.html",
+    "logo": "https://cod-e-codes.com/images/logo.webp",
+    "telephone": "+1-864-882-2937",
+    "priceRange": "$$",
+    "image": "https://cod-e-codes.com/images/preview-new.webp",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "826 Shiloh Rd",
+        "addressLocality": "Seneca",
+        "addressRegion": "SC",
+        "postalCode": "29678",
+        "addressCountry": "US"
+    },
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-864-882-2937",
+        "contactType": "Customer Service"
+    },
+    "sameAs": [
+        "https://facebook.com/cwfosterconstruction"
+    ]
+}
+    </script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Header -->
+    <header class="bg-green-900 text-white py-6 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <!-- Logo and Company Name -->
+            <div class="flex items-center space-x-4">
+                <img src="images/logo.webp" alt="Logo" class="logo">
+                <h1 class="text-2xl md:text-3xl font-semibold">Foster Construction & Remodeling LLC</h1>
+            </div>
+            <!-- Navigation -->
+            <div class="hidden lg:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-500 transition duration-200">Home</a>
+                <a href="#services" class="hover:text-yellow-500 transition duration-200">Services</a>
+                <a href="#projects" class="hover:text-yellow-500 transition duration-200">Projects</a>
+                <a href="#contact" class="hover:text-yellow-500 transition duration-200">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu"
+            class="lg:hidden bg-green-900 text-white px-4 py-4 overflow-hidden max-h-0 transition-all duration-500 ease-in-out hidden">
+            <a href="index.html" class="block py-2 hover:text-yellow-500">Home</a>
+            <a href="#services" class="block py-2 hover:text-yellow-500">Services</a>
+            <a href="#projects" class="block py-2 hover:text-yellow-500">Projects</a>
+            <a href="#contact" class="block py-2 hover:text-yellow-500">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Parallax Effect -->
+    <section class="relative h-96 bg-cover bg-center text-white flex items-center justify-center px-4"
+        style="background-image: url('images/forest-bg.webp'); background-attachment: fixed;">
+        <div class="absolute inset-0 bg-green-800 opacity-70"></div>
+        <div class="relative text-center max-w-screen-sm mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold">Where Quality Counts</h2>
+            <p class="mt-4 text-base md:text-xl">New construction, remodeling, and custom interior & exterior work.</p>
+            <a href="#contact"
+                class="mt-6 inline-block bg-yellow-600 hover:bg-yellow-700 text-white py-3 px-6 rounded-lg font-semibold">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100 relative">
+        <!-- Background image -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-5"
+            style="background-image: url('images/blueprint.webp');">
+        </div>
+        <!-- Semi-transparent overlay for better readability -->
+        <div class="absolute inset-0 bg-white bg-opacity-50"></div>
+
+        <div class="container mx-auto text-center px-6 relative z-10">
+            <h2 class="text-3xl font-bold text-green-800 mb-6">Our Services</h2>
+            <p class="text-md md:text-lg text-gray-700 mb-12">We provide a range of quality construction and remodeling
+                services to fit
+                your needs.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-hammer fa-3x text-green-700 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-2">New Construction</h3>
+                    <p class="text-gray-700">We build custom homes with attention to quality and detail, ensuring each
+                        project meets the highest standards.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-ruler-combined fa-3x text-green-700 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-2">Remodeling</h3>
+                    <p class="text-gray-700">Our remodeling services bring new life to kitchens, bathrooms, and more.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-tree fa-3x text-green-700 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-2">Interior & Exterior Work</h3>
+                    <p class="text-gray-700">From custom woodwork to landscape features, we handle all finishing touches
+                        to complete your vision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-gray-200 py-20">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold text-green-800 mb-6">Featured Projects</h2>
+            <p class="text-md md:text-lg text-gray-700 mb-12">Explore some of our recent work that highlights our
+                commitment
+                to quality.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="images/project1.webp" alt="Luxury Home Renovation" loading="lazy"
+                        class="rounded-lg w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-bold">Luxury Home Renovation</h3>
+                    <p class="text-gray-700">Complete home renovation featuring custom woodwork and high-end finishes.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="images/project2.webp" alt="Exterior Remodeling" loading="lazy"
+                        class="rounded-lg w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-bold">Exterior Remodeling</h3>
+                    <p class="text-gray-700">A complete exterior transformation with new siding, roofing, and
+                        landscaping.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="images/project3.webp" alt="Custom Carpentry" loading="lazy"
+                        class="rounded-lg w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-bold">Custom Carpentry</h3>
+                    <p class="text-gray-700">High-quality custom carpentry and cabinetry for a modern kitchen remodel.
+                    </p>
+                </div>
+            </div>
+
+            <!-- View Project Gallery Button -->
+            <div class="mt-12">
+                <a href="gallery.html"
+                    class="inline-block bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-8 rounded-lg transition duration-200">
+                    View Project Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-gray-100 text-gray-800 py-20">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold text-green-800 mb-6">Testimonials</h2>
+            <p class="text-md md:text-lg text-gray-800 mb-12">
+                Hear what our clients have to say about our work and commitment to excellence.
+            </p>
+            <div id="testimonial-container" class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <div class="testimonial-item">
+                    <blockquote class="text-xl italic font-light text-gray-800 mb-6">
+                        "Foster Construction transformed our home! The quality and attention to detail exceeded our
+                        expectations."
+                    </blockquote>
+                    <div class="flex items-center justify-center space-x-4">
+                        <i class="fas fa-user-circle text-4xl text-green-700"></i>
+                        <div class="text-left">
+                            <p class="font-semibold text-lg text-gray-800">John Doe</p>
+                            <p class="text-sm text-gray-600">Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item hidden">
+                    <blockquote class="text-xl italic font-light text-gray-800 mb-6">
+                        "The team at Foster Construction was professional, timely, and delivered beyond our
+                        expectations.
+                        Highly recommended!"
+                    </blockquote>
+                    <div class="flex items-center justify-center space-x-4">
+                        <i class="fas fa-user-circle text-4xl text-green-700"></i>
+                        <div class="text-left">
+                            <p class="font-semibold text-lg text-gray-800">Jane Smith</p>
+                            <p class="text-sm text-gray-600">Project Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item hidden">
+                    <blockquote class="text-xl italic font-light text-gray-800 mb-6">
+                        "Excellent craftsmanship and attention to detail. Foster Construction made our dream kitchen a
+                        reality!"
+                    </blockquote>
+                    <div class="flex items-center justify-center space-x-4">
+                        <i class="fas fa-user-circle text-4xl text-green-700"></i>
+                        <div class="text-left">
+                            <p class="font-semibold text-lg text-gray-800">Michael Johnson</p>
+                            <p class="text-sm text-gray-600">Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Arrows for Carousel -->
+            <div class="flex justify-center space-x-4 mt-10">
+                <button id="prev" class="bg-green-800 hover:bg-green-700 p-2 rounded-full">
+                    <i class="fas fa-chevron-left text-white"></i>
+                </button>
+                <button id="next" class="bg-green-800 hover:bg-green-700 p-2 rounded-full">
+                    <i class="fas fa-chevron-right text-white"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-green-50 py-20">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold text-green-800 mb-6">Get in Touch</h2>
+            <p class="text-md md:text-lg text-gray-700 mb-12">Let’s discuss your next project!</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Contact Information with Larger Icons and Text -->
+                <div class="text-left md:text-lg lg:text-xl">
+                    <h3 class="text-2xl font-bold text-green-800 mb-6">Contact Information</h3>
+                    <p class="flex items-center text-gray-800 mt-6">
+                        <i class="fas fa-map-marker-alt text-green-700 mr-4 text-2xl lg:text-3xl"></i>
+                        <span>Foster Construction & Remodeling LLC</span>
+                    </p>
+                    <p class="flex items-center text-gray-800 mt-6">
+                        <i class="fas fa-location-arrow text-green-700 mr-4 text-2xl lg:text-3xl"></i>
+                        <span>826 Shiloh Rd, Seneca, SC</span>
+                    </p>
+                    <p class="flex items-center text-gray-800 mt-6">
+                        <i class="fas fa-phone text-green-700 mr-4 text-2xl lg:text-3xl"></i>
+                        <span>Phone: (864) 882-2937</span>
+                    </p>
+                    <p class="flex items-center text-gray-800 mt-6">
+                        <i class="fas fa-envelope text-green-700 mr-4 text-2xl lg:text-3xl"></i>
+                        <span>Email: clintney@aol.com</span>
+                    </p>
+                </div>
+
+                <!-- Contact Form -->
+                <form action="#" method="POST" class="bg-white p-8 rounded-lg shadow-lg">
+                    <input type="text" placeholder="Your Name"
+                        class="w-full p-4 rounded-lg border border-gray-300 mb-4">
+                    <input type="email" placeholder="Your Email"
+                        class="w-full p-4 rounded-lg border border-gray-300 mb-4">
+                    <textarea placeholder="Your Message"
+                        class="w-full p-4 rounded-lg border border-gray-300 mb-4"></textarea>
+                    <button id="sendMessageBtn" type="button"
+                        class="w-full bg-green-700 text-white py-4 rounded-lg hover:bg-green-800 transition duration-200">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Snackbar container -->
+    <div id="snackbar"
+        class="hidden fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-green-700 text-white py-2 px-4 rounded-lg shadow-lg text-center">
+        Messaging functionality coming soon
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white">About Us</h3>
+                    <p class="mt-4 text-gray-400">Foster Construction & Remodeling LLC is a trusted local business in
+                        Upstate SC, specializing in
+                        high-quality construction, custom remodeling, and detailed woodwork.
+                        With a commitment to excellence, we bring decades of experience to every project, from complete
+                        home renovations to custom cabinetry and carpentry.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white">Quick Links</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#services" class="hover:text-yellow-500">Services</a></li>
+                        <li><a href="#projects" class="hover:text-yellow-500">Projects</a></li>
+                        <li><a href="gallery.html" class="hover:text-yellow-500">Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-yellow-500">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white">Connect with Us</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li>
+                            <a href="https://facebook.com/cwfosterconstruction" target="_blank"
+                                class="hover:text-yellow-500">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </a>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="images/sc.webp" alt="SC Logo" class="sc-logo" loading="lazy">
+                            <span class="text-gray-400 text-sm">
+                                Fully licensed and insured, ensuring peace of mind and professional standards on every
+                                project.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider and Copyright Notice -->
+            <div class="text-center text-gray-500 pt-8 border-t border-yellow-600 mt-8">
+                &copy; <span id="year"></span> Foster Construction & Remodeling LLC. All rights reserved.
+                <br>
+                Website developed by <a href="https://www.cod-e-codes.com" class="hover:text-yellow-500">
+                    CodēCodes</a>.
+            </div>
+        </div>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+    </footer>
+
+    <script>
+        // Toggle mobile menu visibility with smooth transition
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+            menu.classList.toggle("open");
+        });
+
+        // Close mobile menu when any link is clicked
+        document.querySelectorAll("#mobile-menu a").forEach(link => {
+            link.addEventListener("click", function () {
+                document.getElementById("mobile-menu").classList.remove("open");
+            });
+        });
+
+        // Display a snackbar when the Send Message button is clicked
+        document.getElementById("sendMessageBtn").addEventListener("click", function (event) {
+            // Prevent default button action to avoid scrolling
+            event.preventDefault();
+
+            // Display the snackbar
+            const snackbar = document.getElementById("snackbar");
+            snackbar.classList.remove("hidden");
+
+            // Hide the snackbar after 3 seconds
+            setTimeout(() => {
+                snackbar.classList.add("hidden");
+            }, 3000);
+        });
+
+        const testimonials = document.querySelectorAll('.testimonial-item');
+        let currentIndex = 0;
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.classList.add('hidden'); // Initially hide all
+                testimonial.classList.remove('fade-in', 'fade-out'); // Remove any previous animations
+            });
+            testimonials[index].classList.remove('hidden'); // Show current
+            testimonials[index].classList.add('fade-in'); // Add fade-in effect
+        }
+
+        document.getElementById('next').addEventListener('click', () => {
+            testimonials[currentIndex].classList.add('fade-out'); // Add fade-out effect to current
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % testimonials.length;
+                showTestimonial(currentIndex);
+            }, 500); // Wait for fade-out to finish
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            testimonials[currentIndex].classList.add('fade-out'); // Add fade-out effect to current
+            setTimeout(() => {
+                currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+                showTestimonial(currentIndex);
+            }, 500); // Wait for fade-out to finish
+        });
+
+        // Initial display of the first testimonial
+        showTestimonial(currentIndex);
+
+        // Check if screen width is for desktop
+        if (window.innerWidth > 768) {
+            window.addEventListener('scroll', function () {
+                const parallaxSection = document.querySelector('.parallax');
+                let scrollPosition = window.pageYOffset;
+                parallaxSection.style.backgroundPositionY = (scrollPosition * 0.5) + 'px';
+            });
+        }
+
+        // Function to reset cache based on the date
+        function checkCache() {
+            const today = new Date().toISOString().split('T')[0];
+            const cachedDate = localStorage.getItem('cacheDate');
+
+            if (cachedDate !== today) {
+                localStorage.setItem('cacheDate', today); // Update the cache date
+                location.reload(true); // Force reload to reset cache
+            }
+        }
+
+        // Run the cache check when the page loads
+        window.addEventListener('load', checkCache);
+    </script>
+</body>
+
+</html>
